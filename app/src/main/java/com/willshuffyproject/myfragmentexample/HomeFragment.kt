@@ -28,6 +28,14 @@ class HomeFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(v: View?) {
 
+        val mCategoryFragment = CategoryFragment()
+        val mFragmentManager = fragmentManager
+        mFragmentManager?.beginTransaction()?.apply {
+            replace(R.id.frame_container, mCategoryFragment, CategoryFragment::class.java.simpleName)
+            addToBackStack(null) //ketika kita tekan tombol back, ia akan pop-out keluar dari stack dan menampilkan objek fragment sebelumnya
+            commit()
+        }
+
     }
 
 }
