@@ -19,8 +19,8 @@ class DetailCategoryFragment : Fragment(), View.OnClickListener {
     lateinit var btnProfile: Button
     lateinit var btnShowDialog: Button
 
+    //ambil data dengan setter getter
     var description: String? = null
-
     companion object{
 
         var EXTRA_NAME = "extra_name"
@@ -55,8 +55,11 @@ class DetailCategoryFragment : Fragment(), View.OnClickListener {
 
         if (arguments != null){
 
+            //ambil data dengan objek bundle
             val categoryName = arguments?.getString(EXTRA_NAME)
             tv_category_name.text = categoryName
+
+            //ambil data dengan setter getter
             tv_category_description.text = description
         }
     }

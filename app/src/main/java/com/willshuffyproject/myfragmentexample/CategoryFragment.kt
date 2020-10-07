@@ -31,12 +31,13 @@ class CategoryFragment : Fragment(), View.OnClickListener {
 
             val mDetailCategoryFragment = DetailCategoryFragment()
 
-
+            //mengirim data dengan objek bundle
             val mBundle = Bundle()
             mBundle.putString(DetailCategoryFragment.EXTRA_NAME, "Lifestyle")
-            val description = "Kategori akan berisi produk-produk lifestyle"
-
             mDetailCategoryFragment.arguments = mBundle
+
+            //mengirim data menggunakan setter getter
+            val description = "Kategori akan berisi produk-produk lifestyle"
             mDetailCategoryFragment.description = description
 
             val mFragManager = fragmentManager
